@@ -1,8 +1,10 @@
 {
   "name": "notus-react",
   "version": "1.1.0",
+  "private":"true",
+  "homepage": "https://github.com/nehalkamal37/apple2/",
   "description": "Notus React - A free Tailwind CSS and React UI Kit and Admin by Creative Tim.",
-  "repository": "https://github.com/creativetimofficial/notus-react",
+  "repository": "https://github.com/nehalkamal37/apple2/",
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.15.3",
@@ -22,7 +24,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && gulp licenses",
+    //"build": "react-scripts build && gulp licenses",
+    
+        "build": "react-scripts build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+    
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run build:tailwind && npm start",
@@ -45,5 +52,8 @@
   },
   "optionalDependencies": {
     "typescript": "4.2.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
